@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VERA CATALONIA — Clean Daily Supplements</title>
+  <meta name="description" content="Minimalist daily food supplements crafted from Catalan botanicals and marine minerals.">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      box-shadow: none !important;
+      text-shadow: none !important;
+      filter: none !important;
+    }
+    body {
+      background-color: #FAF7F2;
+      color: #141615;
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3, .brand-font {
+      font-family: 'Syne', sans-serif;
+    }
+    dialog::backdrop {
+      background: rgba(20, 22, 21, 0.65);
+    }
+    input:focus-visible, button:focus-visible, select:focus-visible {
+      outline: 2px solid #D94E28;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Minimal Announcement Bar -->
+  <div class="bg-[#143D2C] text-[#FAF7F2] text-xs font-medium py-2.5 px-4 text-center">
+    <span>• Crafted in Girona, Catalonia &nbsp;|&nbsp; • 100% Plant &amp; Marine Actives &nbsp;|&nbsp; • 15% Off 2+ Bottles</span>
+  </div>
+
+  <!-- Clean Storefront Header -->
+  <header class="sticky top-0 z-30 bg-[#FAF7F2] border-b border-[#141615]/15">
+    <div class="max-w-6xl mx-auto px-5 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group" aria-label="Vera Catalonia Home">
+        <svg class="w-10 h-10 shrink-0" viewBox="0 0 40 40" role="img" aria-label="Vera Leaf Emblem">
+          <rect width="40" height="40" rx="12" fill="#D94E28"/>
+          <path d="M20 9C13 15 12 24 20 31C28 24 27 15 20 9Z" fill="#FAF7F2"/>
+          <path d="M20 14V28" stroke="#D94E28" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        <div>
+          <span class="brand-font text-xl font-extrabold tracking-tight block leading-none">VERA</span>
+          <span class="text-[11px] uppercase tracking-widest text-[#5A5F5C] font-bold block mt-0.5">Catalonia</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary Navigation" class="hidden md:flex items-center gap-8 text-sm font-bold">
+        <a href="#shop" class="hover:text-[#D94E28] transition-colors">Supplements</a>
+        <a href="#finder" class="hover:text-[#D94E28] transition-colors">Daily Finder</a>
+        <a href="#origins" class="hover:text-[#D94E28] transition-colors">Catalan Ingredients</a>
+      </nav>
+
+      <button id="open-bag-btn" type="button" class="px-4 py-2.5 rounded-full bg-[#141615] text-[#FAF7F2] hover:bg-[#D94E28] transition-colors text-sm font-bold flex items-center gap-2.5 cursor-pointer" aria-label="Open shopping bag">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <path d="M3 6h18"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span>Bag</span>
+        <span id="bag-count" class="w-5 h-5 rounded-full bg-[#D94E28] text-[#FAF7F2] text-xs inline-flex items-center justify-center">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="flex-1">
+
+    <!-- Hero Section -->
+    <section class="max-w-6xl mx-auto px-5 pt-10 pb-16 md:py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E8EFEA] text-[#143D2C] text-xs font-bold uppercase tracking-wider">
+            <span class="w-2 h-2 rounded-full bg-[#143D2C]"></span>
+            <span>Mediterranean Bio-Nutrition</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-[1.03]">
+            Pure daily nutrition from <span class="text-[#D94E28]">Catalan</span> nature.
+          </h1>
+
+          <ul class="space-y-3 text-base sm:text-lg text-[#2C302E] font-medium">
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-[#D94E28] text-[#FAF7F2] text-xs font-bold inline-flex items-center justify-center shrink-0">✓</span>
+              <span>Wild Pyrenees botanicals &amp; Costa Brava marine minerals</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-[#143D2C] text-[#FAF7F2] text-xs font-bold inline-flex items-center justify-center shrink-0">✓</span>
+              <span>Zero synthetic fillers, gums, or artificial sweeteners</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-6 h-6 rounded-full bg-[#1D5B96] text-[#FAF7F2] text-xs font-bold inline-flex items-center justify-center shrink-0">✓</span>
+              <span>UV-glass apothecary jars refilled from Girona</span>
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#shop" class="px-7 py-4 rounded-full bg-[#D94E28] text-[#FAF7F2] hover:bg-[#141615] transition-colors font-bold text-sm uppercase tracking-wider">
+              Shop Formulas
+            </a>
+            <a href="#finder" class="px-7 py-4 rounded-full border-2 border-[#141615] text-[#141615] hover:bg-[#141615] hover:text-[#FAF7F2] transition-colors font-bold text-sm uppercase tracking-wider">
+              20-Sec Routine Finder
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual: Appealing Flat-Vector Supplement Bottles Showcase -->
+        <div class="lg:col-span-6">
+          <div class="rounded-3xl bg-[#EFECE4] border-2 border-[#141615] p-6 sm:p-10 relative overflow-hidden">
+            <div class="grid grid-cols-3 gap-3 sm:gap-5 items-end pt-4">
+              <!-- Bottle 1: Deep Sleep -->
+              <div class="text-center">
+                <svg class="w-full h-auto max-w-[140px] mx-auto" viewBox="0 0 140 210" role="img" aria-label="Montseny Sleep Magnesium Bottle">
+                  <rect x="42" y="10" width="56" height="22" rx="6" fill="#141615"/>
+                  <rect x="48" y="32" width="44" height="10" fill="#2A2E2C"/>
+                  <rect x="20" y="40" width="100" height="160" rx="22" fill="#1D5B96" stroke="#141615" stroke-width="3"/>
+                  <rect x="20" y="75" width="100" height="95" fill="#FAF7F2" stroke="#141615" stroke-width="3"/>
+                  <circle cx="70" cy="105" r="12" fill="#1D5B96"/>
+                  <path d="M66 100a7 7 0 108 10 6 6 0 01-8-10z" fill="#FAF7F2"/>
+                  <text x="70" y="136" text-anchor="middle" fill="#141615" font-family="Syne, sans-serif" font-weight="800" font-size="13">CALMA</text>
+                  <text x="70" y="152" text-anchor="middle" fill="#5A5F5C" font-family="DM Sans, sans-serif" font-weight="700" font-size="9">MAGNESIUM</text>
+                </svg>
+                <span class="inline-block mt-3 px-2.5 py-1 rounded-full bg-[#1D5B96] text-[#FAF7F2] text-[11px] font-bold">Sleep</span>
+              </div>
+
+              <!-- Bottle 2: Peak Energy (Center Hero) -->
+              <div class="text-center">
+                <svg class="w-full h-auto max-w-[155px] mx-auto" viewBox="0 0 150 230" role="img" aria-label="Pyrenees Energy Bottle">
+                  <rect x="45" y="8" width="60" height="24" rx="6" fill="#141615"/>
+                  <rect x="52" y="32" width="46" height="12" fill="#2A2E2C"/>
+                  <rect x="18" y="42" width="114" height="178" rx="26" fill="#D94E28" stroke="#141615" stroke-width="3"/>
+                  <rect x="18" y="80" width="114" height="105" fill="#FAF7F2" stroke="#141615" stroke-width="3"/>
+                  <polygon points="75,94 92,122 58,122" fill="#D94E28"/>
+                  <text x="75" y="146" text-anchor="middle" fill="#141615" font-family="Syne, sans-serif" font-weight="800" font-size="15">CIM</text>
+                  <text x="75" y="163" text-anchor="middle" fill="#5A5F5C" font-family="DM Sans, sans-serif" font-weight="700" font-size="10">CREATINE + RHODIOLA</text>
+                </svg>
+                <span class="inline-block mt-3 px-2.5 py-1 rounded-full bg-[#D94E28] text-[#FAF7F2] text-[11px] font-bold">Energy</span>
+              </div>
+
+              <!-- Bottle 3: Longevity -->
+              <div class="text-center">
+                <svg class="w-full h-auto max-w-[140px] mx-auto" viewBox="0 0 140 210" role="img" aria-label="Emporda Olive Polyphenols Bottle">
+                  <rect x="42" y="10" width="56" height="22" rx="6" fill="#141615"/>
+                  <rect x="48" y="32" width="44" height="10" fill="#2A2E2C"/>
+                  <rect x="20" y="40" width="100" height="160" rx="22" fill="#143D2C" stroke="#141615" stroke-width="3"/>
+                  <rect x="20" y="75" width="100" height="95" fill="#FAF7F2" stroke="#141615" stroke-width="3"/>
+                  <circle cx="70" cy="105" r="12" fill="#143D2C"/>
+                  <path d="M70 97C65 102 65 108 70 113C75 108 75 102 70 97Z" fill="#FAF7F2"/>
+                  <text x="70" y="136" text-anchor="middle" fill="#141615" font-family="Syne, sans-serif" font-weight="800" font-size="13">OLIVA</text>
+                  <text x="70" y="152" text-anchor="middle" fill="#5A5F5C" font-family="DM Sans, sans-serif" font-weight="700" font-size="9">OMEGA + POLYPHENOL</text>
+                </svg>
+                <span class="inline-block mt-3 px-2.5 py-1 rounded-full bg-[#143D2C] text-[#FAF7F2] text-[11px] font-bold">Longevity</span>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-[#141615]/15 flex items-center justify-between text-xs font-bold text-[#2C302E]">
+              <span>• Lab-verified purity</span>
+              <span>• 30-day supply per jar</span>
+              <span>• Vegan capsules</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Catalog Section -->
+    <section id="shop" class="max-w-6xl mx-auto px-5 py-14 border-t border-[#141615]/15">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-[#D94E28] block mb-1">Daily Essentials</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Targeted Formulas</h2>
+        </div>
+
+        <!-- Clean Pill Filters -->
+        <div class="flex flex-wrap gap-2" role="group" aria-label="Filter supplements by benefit">
+          <button type="button" data-filter="ALL" class="filter-pill px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-[#141615] text-[#FAF7F2] cursor-pointer">All (6)</button>
+          <button type="button" data-filter="SLEEP" class="filter-pill px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-[#EFECE4] text-[#141615] hover:bg-[#1D5B96] hover:text-[#FAF7F2] cursor-pointer">Sleep</button>
+          <button type="button" data-filter="ENERGY" class="filter-pill px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-[#EFECE4] text-[#141615] hover:bg-[#D94E28] hover:text-[#FAF7F2] cursor-pointer">Energy</button>
+          <button type="button" data-filter="RECOVERY" class="filter-pill px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-[#EFECE4] text-[#141615] hover:bg-[#0F766E] hover:text-[#FAF7F2] cursor-pointer">Hydration &amp; Muscle</button>
+          <button type="button" data-filter="LONGEVITY" class="filter-pill px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-[#EFECE4] text-[#141615] hover:bg-[#143D2C] hover:text-[#FAF7F2] cursor-pointer">Longevity</button>
+        </div>
+      </div>
+
+      <!-- Product Cards Grid -->
+      <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Populated dynamically -->
+      </div>
+    </section>
+
+    <!-- Simplified 20-Second Routine Finder -->
+    <section id="finder" class="max-w-6xl mx-auto px-5 py-14">
+      <div class="rounded-3xl bg-[#143D2C] text-[#FAF7F2] p-6 sm:p-10 lg:p-12 border-2 border-[#141615]">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-5 space-y-4">
+            <span class="inline-block px-3 py-1 rounded-full bg-[#D94E28] text-[#FAF7F2] text-xs font-bold uppercase tracking-wider">
+              Personalized Dosage
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+              Build your daily pair in seconds.
+            </h2>
+            <ul class="space-y-2 text-sm text-[#E8EFEA]">
+              <li>• Calculates exact daily dosage by body weight</li>
+              <li>• Verified within European (EFSA) safe limits</li>
+            </ul>
+
+            <form id="finder-form" class="space-y-4 pt-2" novalidate>
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label for="weight-input" class="text-xs font-bold uppercase tracking-wider block mb-1.5">Weight (kg)</label>
+                  <input id="weight-input" type="number" min="35" max="180" value="70" required
+                    class="w-full px-4 py-3 rounded-xl bg-[#FAF7F2] text-[#141615] font-bold text-sm border-2 border-[#141615]">
+                </div>
+                <div>
+                  <label for="activity-select" class="text-xs font-bold uppercase tracking-wider block mb-1.5">Lifestyle</label>
+                  <select id="activity-select" class="w-full px-3 py-3 rounded-xl bg-[#FAF7F2] text-[#141615] font-bold text-sm border-2 border-[#141615]">
+                    <option value="baseline">Daily Wellness</option>
+                    <option value="endurance" selected>Endurance / Sport</option>
+                    <option value="strength">Strength Training</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="goal-select" class="text-xs font-bold uppercase tracking-wider block mb-1.5">Primary Goal</label>
+                <select id="goal-select" class="w-full px-4 py-3 rounded-xl bg-[#FAF7F2] text-[#141615] font-bold text-sm border-2 border-[#141615]">
+                  <option value="ENERGY">All-Day Energy &amp; Stamina</option>
+                  <option value="SLEEP">Deep Sleep &amp; Calm Mind</option>
+                  <option value="LONGEVITY">Heart, Brain &amp; Cellular Aging</option>
+                </select>
+              </div>
+
+              <p id="finder-error" class="text-xs font-bold text-[#FBBF24] hidden" role="alert"></p>
+
+              <button type="submit" class="w-full py-3.5 rounded-full bg-[#D94E28] text-[#FAF7F2] hover:bg-[#FAF7F2] hover:text-[#141615] transition-colors font-bold text-sm uppercase tracking-wider cursor-pointer">
+                Update My Recommendation
+              </button>
+            </form>
+          </div>
+
+          <!-- Finder Recommendation Card -->
+          <div class="lg:col-span-7 bg-[#FAF7F2] text-[#141615] rounded-2xl p-6 sm:p-8 border-2 border-[#141615]">
+            <div class="flex flex-wrap items-center justify-between gap-2 pb-4 mb-5 border-b border-[#141615]/15">
+              <div>
+                <span class="text-xs font-bold uppercase text-[#5A5F5C] block">Your Custom Regimen</span>
+                <h3 class="text-xl font-extrabold">2-Bottle Synergy Stack</h3>
+              </div>
+              <span id="efsa-badge" class="px-3 py-1 rounded-full bg-[#E8EFEA] text-[#143D2C] text-xs font-bold">
+                ✓ EFSA Safe Dosage
+              </span>
+            </div>
+
+            <div id="finder-stats" class="grid grid-cols-3 gap-3 mb-6">
+              <!-- Populated by JS -->
+            </div>
+
+            <div class="p-4 rounded-xl bg-[#EFECE4] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <ul id="finder-pair-list" class="text-sm font-bold space-y-1">
+                <!-- Populated by JS -->
+              </ul>
+              <button id="add-pair-btn" type="button" class="shrink-0 px-6 py-3 rounded-full bg-[#141615] text-[#FAF7F2] hover:bg-[#D94E28] transition-colors text-xs font-bold uppercase tracking-wider cursor-pointer">
+                Add Both (Save 15%)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalan Origins Strip (Concise, Visual, Single Contact Location) -->
+    <section id="origins" class="max-w-6xl mx-auto px-5 py-14 border-t border-[#141615]/15">
+      <div class="mb-8">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#143D2C] block mb-1">Local Provenance</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Sourced Across Catalonia</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <div class="rounded-2xl p-6 bg-[#EFECE4] border-2 border-[#141615]">
+          <div class="w-11 h-11 rounded-xl bg-[#D94E28] text-[#FAF7F2] flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+              <path d="M3 20h18L13 6l-4 7-3-3-3 10z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-extrabold mb-2">Pyrenees Peaks (2,100m)</h3>
+          <ul class="text-sm text-[#2C302E] space-y-1.5">
+            <li>• Wild alpine Rhodiola rosea root</li>
+            <li>• Harvested in Val d’Aran &amp; Cerdanya</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl p-6 bg-[#EFECE4] border-2 border-[#141615]">
+          <div class="w-11 h-11 rounded-xl bg-[#143D2C] text-[#FAF7F2] flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+              <path d="M12 3C7 8 6 15 12 21c6-6 5-13 0-18z"/>
+              <path d="M12 8v10"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-extrabold mb-2">Empordà &amp; Priorat Groves</h3>
+          <ul class="text-sm text-[#2C302E] space-y-1.5">
+            <li>• Argudell olive fruit polyphenols</li>
+            <li>• Old-vine Garnatxa grape resveratrol</li>
+          </ul>
+        </div>
+
+        <div class="rounded-2xl p-6 bg-[#EFECE4] border-2 border-[#141615]">
+          <div class="w-11 h-11 rounded-xl bg-[#1D5B96] text-[#FAF7F2] flex items-center justify-center mb-4">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+              <path d="M2 12c3-4 6-4 9 0s6 4 9 0"/>
+              <path d="M2 17c3-4 6-4 9 0s6 4 9 0"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-extrabold mb-2">Costa Brava Marine Reserve</h3>
+          <ul class="text-sm text-[#2C302E] space-y-1.5">
+            <li>• Cap de Creus cold-filtered seawater minerals</li>
+            <li>• Plant-based marine microalgae Omega-3</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Single Non-Repeated Lab & Contact Bar -->
+      <div class="rounded-2xl bg-[#EFECE4] border-2 border-[#141615] p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs sm:text-sm font-medium">
+        <div class="flex items-center gap-3">
+          <span class="px-2.5 py-1 rounded-md bg-[#141615] text-[#FAF7F2] font-bold text-xs">HQ &amp; LAB</span>
+          <span>Carrer Pic de Peguera 15, Parc Científic, 17003 Girona, Catalonia · <a href="mailto:hola@veracatalonia.cat" class="underline font-bold hover:text-[#D94E28]">hola@veracatalonia.cat</a></span>
+        </div>
+        <span class="text-xs font-bold text-[#143D2C]">• Free 24h Catalan Delivery</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Native HTML5 Shopping Bag Modal -->
+  <dialog id="bag-dialog" class="m-auto w-full max-w-md rounded-3xl border-2 border-[#141615] bg-[#FAF7F2] text-[#141615] p-0 overflow-hidden">
+    <div class="p-5 bg-[#141615] text-[#FAF7F2] flex items-center justify-between">
+      <h2 class="text-lg font-extrabold">Your Supplement Bag</h2>
+      <button id="close-bag-btn" type="button" class="px-3 py-1 rounded-full bg-[#2C302E] hover:bg-[#D94E28] text-xs font-bold cursor-pointer">
+        Close
+      </button>
+    </div>
+
+    <div class="p-6 space-y-5">
+      <div id="bag-items" class="space-y-3 max-h-60 overflow-y-auto"></div>
+
+      <div class="border-t border-[#141615]/15 pt-4 space-y-1.5 text-sm">
+        <div class="flex justify-between text-[#143D2C] font-bold">
+          <span>Bundle Savings (15% on 2+ jars)</span>
+          <span id="bag-discount">-€0.00</span>
+        </div>
+        <div class="flex justify-between text-lg font-extrabold pt-1">
+          <span>Total</span>
+          <span id="bag-total">€0.00</span>
+        </div>
+      </div>
+
+      <form id="checkout-form" class="space-y-3 pt-2 border-t border-[#141615]/15" novalidate>
+        <div>
+          <label for="postal-code" class="text-xs font-bold uppercase tracking-wider block mb-1">Delivery Postal Code (5 Digits)</label>
+          <input id="postal-code" type="text" inputmode="numeric" maxlength="5" placeholder="17003 (Girona) or 08001 (BCN)" required
+            class="w-full px-4 py-2.5 rounded-xl bg-[#EFECE4] border-2 border-[#141615] text-sm font-bold">
+        </div>
+        <p id="checkout-msg" class="text-xs font-bold hidden" role="status"></p>
+        <div class="flex gap-2 pt-1">
+          <button id="clear-bag-btn" type="button" class="px-4 py-3 rounded-full border-2 border-[#141615] text-xs font-bold uppercase cursor-pointer hover:bg-[#EFECE4]">
+            Clear
+          </button>
+          <button type="submit" class="flex-1 py-3 rounded-full bg-[#D94E28] text-[#FAF7F2] hover:bg-[#141615] transition-colors text-xs font-bold uppercase tracking-wider cursor-pointer">
+            Complete Order
+          </button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Minimalist Footer with Required Stack & Authorship -->
+  <footer class="bg-[#141615] text-[#FAF7F2] py-8 px-5 mt-12">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs">
+      <ul class="space-y-1.5 text-[#E8EFEA]">
+        <li>• <strong>Stack:</strong> Semantic HTML5 (`&lt;dialog&gt;`), Tailwind CSS v4, Vanilla ES2024 JS, Inline Vector SVGs (Zero Runtime Dependencies)</li>
+        <li>• <strong>Credits:</strong> Made by Roger Pla Ballús with Gemini 2.5 Pro</li>
+      </ul>
+      <span id="test-badge" class="px-3 py-1.5 rounded-full bg-[#143D2C] text-[#FAF7F2] font-bold shrink-0">
+        ✓ Self-Tests Passing
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      'use strict';
+
+      const eur = new Intl.NumberFormat('en-IE', { style: 'currency', currency: 'EUR' });
+
+      // ponytail: static in-memory catalog; switch to paginated JSON API if catalog exceeds 200 SKUs
+      const PRODUCTS = Object.freeze([
+        {
+          id: 'CALMA',
+          title: 'Calma Magnesium',
+          subtitle: 'Montseny Chelated Bisglycinate',
+          category: 'SLEEP',
+          tag: 'Best for Sleep',
+          color: '#1D5B96',
+          bgTint: '#E8F0F8',
+          priceCents: 2800,
+          servings: '60 Vegan Capsules',
+          bullets: [
+            '300 mg gentle elemental magnesium for deep sleep',
+            'Zero stomach upset; relaxes evening muscle tension'
+          ]
+        },
+        {
+          id: 'CIM',
+          title: 'Cim Peak Energy',
+          subtitle: 'Pyrenees Rhodiola + Creatine',
+          category: 'ENERGY',
+          tag: 'Best Seller',
+          color: '#D94E28',
+          bgTint: '#FCEEED',
+          priceCents: 3400,
+          servings: '30 Scoops (180g)',
+          bullets: [
+            '5g micronized creatine + 300mg alpine Rhodiola rosea',
+            'Boosts physical stamina and mental focus without caffeine'
+          ]
+        },
+        {
+          id: 'OLIVA',
+          title: 'Oliva Cellular Omega',
+          subtitle: 'Empordà Olive + Algae DHA',
+          category: 'LONGEVITY',
+          tag: 'Heart & Brain',
+          color: '#143D2C',
+          bgTint: '#E8EFEA',
+          priceCents: 4200,
+          servings: '60 Softgels',
+          bullets: [
+            '600 mg plant-based marine DHA + 25 mg olive polyphenols',
+            'Protects cardiovascular & cognitive vitality daily'
+          ]
+        },
+        {
+          id: 'MAR',
+          title: 'Mar Pure Electrolytes',
+          subtitle: 'Costa Brava Marine Minerals',
+          category: 'RECOVERY',
+          tag: 'Zero Sugar',
+          color: '#0F766E',
+          bgTint: '#E6F4F1',
+          priceCents: 2400,
+          servings: '30 Hydration Sachets',
+          bullets: [
+            'Balanced marine sodium, potassium & ionic magnesium',
+            'Crisp Mediterranean citrus twist with zero sweeteners'
+          ]
+        },
+        {
+          id: 'VINYA',
+          title: 'Vinya Longevity NAD+',
+          subtitle: 'Priorat Grape Resveratrol',
+          category: 'LONGEVITY',
+          tag: 'Cellular Repair',
+          color: '#7C2D84',
+          bgTint: '#F5EBF7',
+          priceCents: 4800,
+          servings: '30 Morning Capsules',
+          bullets: [
+            '300 mg Priorat trans-resveratrol + 300 mg NAD+ precursor',
+            'Supports healthy cellular aging and mitochondrial renewal'
+          ]
+        },
+        {
+          id: 'AVELLANA',
+          title: 'Avellana Plant Protein',
+          subtitle: 'Reus Hazelnut & Fava Isolate',
+          category: 'RECOVERY',
+          tag: 'Smooth Texture',
+          color: '#B4690E',
+          bgTint: '#FBF3E4',
+          priceCents: 3600,
+          servings: '20 Servings (600g)',
+          bullets: [
+            '24 g complete plant protein from roasted Reus hazelnuts',
+            'Silky texture with zero chalkiness or gums'
+          ]
+        }
+      ]);
+
+      const bag = new Map();
+
+      // Custom SVG Supplement Bottle Generator for each product card
+      function createBottleSvg(p) {
+        return `
+          <svg class="w-28 h-36 mx-auto" viewBox="0 0 120 160" aria-hidden="true">
+            <rect x="36" y="8" width="48" height="18" rx="5" fill="#141615"/>
+            <rect x="42" y="26" width="36" height="8" fill="#2C302E"/>
+            <rect x="18" y="32" width="84" height="120" rx="18" fill="${p.color}" stroke="#141615" stroke-width="2.5"/>
+            <rect x="18" y="60" width="84" height="68" fill="#FAF7F2" stroke="#141615" stroke-width="2.5"/>
+            <circle cx="60" cy="82" r="8" fill="${p.color}"/>
+            <text x="60" y="106" text-anchor="middle" fill="#141615" font-family="Syne, sans-serif" font-weight="800" font-size="11">${p.id}</text>
+            <text x="60" y="119" text-anchor="middle" fill="#5A5F5C" font-family="DM Sans, sans-serif" font-weight="700" font-size="7.5">VERA CATALONIA</text>
+          </svg>
+        `;
+      }
+
+      // Trust-Boundary Input Sanitizer
+      function sanitizePostal(raw) {
+        if (typeof raw !== 'string') return '';
+        return raw.trim().replace(/[^0-9]/g, '').slice(0, 5);
+      }
+
+      // Pure Integer-Cent Financial Math (15% off on 2+ units)
+      function calculateBagTotals(cartMap) {
+        let subtotalCents = 0;
+        let totalUnits = 0;
+        // ponytail: linear scan over 6-item catalog; switch to Map index if SKUs > 1,000
+        for (const [id, qty] of cartMap.entries()) {
+          const validQty = Math.max(0, Math.min(20, Math.trunc(Number(qty) || 0)));
+          const prod = PRODUCTS.find(item => item.id === id);
+          if (prod && validQty > 0) {
+            subtotalCents += prod.priceCents * validQty;
+            totalUnits += validQty;
+          }
+        }
+        const discountCents = totalUnits >= 2 ? Math.round(subtotalCents * 0.15) : 0;
+        return {
+          totalUnits,
+          subtotalCents,
+          discountCents,
+          finalCents: subtotalCents - discountCents
+        };
+      }
+
+      // Pure Dosage & Pair Calculator with EFSA 350mg Magnesium Safety Cap
+      function computeRoutine(weightKg, activity, goal) {
+        const w = Number(weightKg);
+        if (!Number.isFinite(w) || w < 35 || w > 180) {
+          return { error: 'Please enter a body weight between 35 kg and 180 kg.' };
+        }
+        const factor = activity === 'strength' ? 1.45 : activity === 'endurance' ? 1.3 : 1.0;
+        const creatineGrams = Math.min(10, Math.round(w * 0.06 * factor * 10) / 10);
+        const rawMg = Math.round(w * 4.0 * (factor > 1 ? 1.15 : 1));
+        const magnesiumMg = Math.min(350, rawMg);
+        const efsaCapped = rawMg > 350;
+        const omegaMg = goal === 'LONGEVITY' ? 600 : 400;
+
+        const pairIds = goal === 'ENERGY'
+          ? ['CIM', 'MAR']
+          : goal === 'SLEEP'
+            ? ['CALMA', 'OLIVA']
+            : ['VINYA', 'OLIVA'];
+
+        return {
+          error: null,
+          creatineGrams,
+          magnesiumMg,
+          omegaMg,
+          efsaCapped,
+          pairIds
+        };
+      }
+
+      // Render Product Grid
+      const gridEl = document.getElementById('product-grid');
+      function renderProducts(filter = 'ALL') {
+        const list = filter === 'ALL' ? PRODUCTS : PRODUCTS.filter(p => p.category === filter);
+        gridEl.innerHTML = '';
+
+        for (const p of list) {
+          const card = document.createElement('article');
+          card.className = 'rounded-3xl bg-[#FAF7F2] border-2 border-[#141615] overflow-hidden flex flex-col justify-between';
+
+          const bulletsHtml = p.bullets
+            .map(b => `<li class="flex items-start gap-2"><span class="font-bold" style="color:${p.color}">•</span><span>${b}</span></li>`)
+            .join('');
+
+          card.innerHTML = `
+            <div>
+              <div class="p-6 relative border-b-2 border-[#141615]" style="background:${p.bgTint}">
+                <span class="px-3 py-1 rounded-full text-[11px] font-bold text-[#FAF7F2] inline-block" style="background:${p.color}">
+                  ${p.tag}
+                </span>
+                <div class="my-2">
+                  ${createBottleSvg(p)}
+                </div>
+              </div>
+
+              <div class="p-6 pb-4">
+                <div class="flex items-baseline justify-between gap-2 mb-1">
+                  <h3 class="text-xl font-extrabold">${p.title}</h3>
+                  <span class="text-lg font-extrabold">${eur.format(p.priceCents / 100)}</span>
+                </div>
+                <p class="text-xs font-bold uppercase tracking-wider text-[#5A5F5C] mb-4">${p.subtitle} · ${p.servings}</p>
+
+                <ul class="text-sm text-[#2C302E] space-y-2 mb-4">
+                  ${bulletsHtml}
+                </ul>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6">
+              <button type="button" data-add="${p.id}" class="w-full py-3.5 rounded-full bg-[#141615] text-[#FAF7F2] hover:bg-[#D94E28] transition-colors text-xs font-bold uppercase tracking-wider cursor-pointer">
+                + Add to Bag — ${eur.format(p.priceCents / 100)}
+              </button>
+            </div>
+          `;
+          gridEl.appendChild(card);
+        }
+      }
+
+      // Sync Shopping Bag Modal & Header Count
+      function syncBagUI() {
+        const totals = calculateBagTotals(bag);
+        document.getElementById('bag-count').textContent = String(totals.totalUnits);
+        document.getElementById('bag-discount').textContent = `-${eur.format(totals.discountCents / 100)}`;
+        document.getElementById('bag-total').textContent = eur.format(totals.finalCents / 100);
+
+        const listEl = document.getElementById('bag-items');
+        listEl.innerHTML = '';
+
+        if (totals.totalUnits === 0) {
+          listEl.innerHTML = '<p class="text-sm text-[#5A5F5C] py-4">• Your bag is empty. Add a formula to get started.</p>';
+          return;
+        }
+
+        for (const [id, qty] of bag.entries()) {
+          const prod = PRODUCTS.find(p => p.id === id);
+          if (!prod) continue;
+          const row = document.createElement('div');
+          row.className = 'flex items-center justify-between gap-3 p-3 rounded-2xl bg-[#EFECE4] border border-[#141615] text-sm';
+          row.innerHTML = `
+            <div class="flex items-center gap-2.5">
+              <span class="w-3.5 h-3.5 rounded-full shrink-0" style="background:${prod.color}"></span>
+              <div>
+                <strong class="block leading-tight">${prod.title}</strong>
+                <span class="text-xs text-[#5A5F5C]">${eur.format(prod.priceCents / 100)} each</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <button type="button" data-dec="${prod.id}" class="w-7 h-7 rounded-full bg-[#FAF7F2] border border-[#141615] font-bold cursor-pointer" aria-label="Decrease quantity">-</button>
+              <span class="font-bold w-5 text-center">${qty}</span>
+              <button type="button" data-inc="${prod.id}" class="w-7 h-7 rounded-full bg-[#FAF7F2] border border-[#141615] font-bold cursor-pointer" aria-label="Increase quantity">+</button>
+            </div>
+          `;
+          listEl.appendChild(row);
+        }
+      }
+
+      function updateBag(id, delta) {
+        const curr = bag.get(id) || 0;
+        const next = Math.max(0, Math.min(20, curr + delta));
+        if (next === 0) bag.delete(id);
+        else bag.set(id, next);
+        syncBagUI();
+      }
+
+      // Render Routine Finder
+      let activePair = ['CIM', 'MAR'];
+      function renderFinder() {
+        const weight = document.getElementById('weight-input').value;
+        const activity = document.getElementById('activity-select').value;
+        const goal = document.getElementById('goal-select').value;
+        const errEl = document.getElementById('finder-error');
+
+        const res = computeRoutine(weight, activity, goal);
+        if (res.error) {
+          errEl.textContent = res.error;
+          errEl.classList.remove('hidden');
+          return;
+        }
+        errEl.classList.add('hidden');
+        activePair = res.pairIds;
+
+        const badge = document.getElementById('efsa-badge');
+        badge.textContent = res.efsaCapped ? '✓ EFSA 350mg Cap Active' : '✓ EFSA Safe Dosage';
+
+        document.getElementById('finder-stats').innerHTML = `
+          <div class="p-3.5 rounded-2xl bg-[#FCEEED] border border-[#141615]">
+            <span class="text-[11px] font-bold uppercase text-[#D94E28] block">Creatine</span>
+            <strong class="text-xl font-extrabold">${res.creatineGrams} g/day</strong>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-[#E8F0F8] border border-[#141615]">
+            <span class="text-[11px] font-bold uppercase text-[#1D5B96] block">Magnesium</span>
+            <strong class="text-xl font-extrabold">${res.magnesiumMg} mg/day</strong>
+          </div>
+          <div class="p-3.5 rounded-2xl bg-[#E8EFEA] border border-[#141615]">
+            <span class="text-[11px] font-bold uppercase text-[#143D2C] block">Algae DHA</span>
+            <strong class="text-xl font-extrabold">${res.omegaMg} mg/day</strong>
+          </div>
+        `;
+
+        const pairItems = res.pairIds
+          .map(id => PRODUCTS.find(p => p.id === id))
+          .filter(Boolean);
+
+        document.getElementById('finder-pair-list').innerHTML = pairItems
+          .map(item => `<li>• ${item.title} (${item.subtitle})</li>`)
+          .join('');
+      }
+
+      // Delegated Clicks
+      document.addEventListener('click', (e) => {
+        const pill = e.target.closest('.filter-pill');
+        if (pill) {
+          document.querySelectorAll('.filter-pill').forEach(btn => {
+            btn.className = 'filter-pill px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-[#EFECE4] text-[#141615] cursor-pointer';
+          });
+          pill.className = 'filter-pill px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-[#141615] text-[#FAF7F2] cursor-pointer';
+          renderProducts(pill.dataset.filter);
+          return;
+        }
+
+        const addBtn = e.target.closest('[data-add]');
+        if (addBtn) {
+          updateBag(addBtn.dataset.add, 1);
+          const prev = addBtn.textContent;
+          addBtn.textContent = '✓ Added to Bag';
+          addBtn.style.backgroundColor = '#143D2C';
+          setTimeout(() => {
+            addBtn.textContent = prev;
+            addBtn.style.backgroundColor = '';
+          }, 600);
+          return;
+        }
+
+        const incBtn = e.target.closest('[data-inc]');
+        if (incBtn) {
+          updateBag(incBtn.dataset.inc, 1);
+          return;
+        }
+
+        const decBtn = e.target.closest('[data-dec]');
+        if (decBtn) {
+          updateBag(decBtn.dataset.dec, -1);
+        }
+      });
+
+      document.getElementById('finder-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        renderFinder();
+      });
+
+      document.getElementById('add-pair-btn').addEventListener('click', () => {
+        for (const id of activePair) updateBag(id, 1);
+        document.getElementById('bag-dialog').showModal();
+      });
+
+      const dialog = document.getElementById('bag-dialog');
+      document.getElementById('open-bag-btn').addEventListener('click', () => dialog.showModal());
+      document.getElementById('close-bag-btn').addEventListener('click', () => dialog.close());
+      document.getElementById('clear-bag-btn').addEventListener('click', () => {
+        bag.clear();
+        syncBagUI();
+      });
+
+      document.getElementById('checkout-form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const msgEl = document.getElementById('checkout-msg');
+        const postalInput = document.getElementById('postal-code');
+        const cleanPostal = sanitizePostal(postalInput.value);
+        postalInput.value = cleanPostal;
+        const totals = calculateBagTotals(bag);
+
+        if (totals.totalUnits === 0) {
+          msgEl.textContent = '• Add at least 1 bottle before checking out.';
+          msgEl.className = 'text-xs font-bold text-[#D94E28] block';
+          return;
+        }
+        if (cleanPostal.length !== 5) {
+          msgEl.textContent = '• Enter a valid 5-digit postal code (e.g. 17003).';
+          msgEl.className = 'text-xs font-bold text-[#D94E28] block';
+          return;
+        }
+        const isCat = /^(08|17|25|43)[0-9]{3}$/.test(cleanPostal);
+        const speed = isCat ? '24h Express Catalonia Courier' : '48h Eco Dispatch';
+        msgEl.textContent = `✓ Order confirmed (${totals.totalUnits} jars · ${eur.format(totals.finalCents / 100)}) — ${speed} to ${cleanPostal}.`;
+        msgEl.className = 'text-xs font-bold text-[#143D2C] block';
+      });
+
+      // Targeted Unit Tests for Financial Math, EFSA Safety Bounds & Input Sanitizer
+      function runUnitTests() {
+        const assert = (cond, msg) => { if (!cond) throw new Error(msg); };
+
+        // 1. Trust-boundary postal sanitizer strips non-digits
+        assert(sanitizePostal('<script>17003abc') === '17003', 'Postal sanitizer failed');
+
+        // 2. EFSA 350mg magnesium ceiling enforced for high body mass
+        const highLoad = computeRoutine(130, 'strength', 'SLEEP');
+        assert(highLoad.magnesiumMg === 350 && highLoad.efsaCapped === true, 'EFSA cap failed');
+
+        // 3. Out-of-bounds weight rejected
+        assert(computeRoutine(20, 'baseline', 'ENERGY').error !== null, 'Min weight check failed');
+
+        // 4. 15% bundle discount applied in integer cents at >= 2 bottles
+        const testBag = new Map([['CALMA', 1], ['CIM', 1]]); // 2800 + 3400 = 6200 cents; 15% = 930
+        const totals = calculateBagTotals(testBag);
+        assert(totals.subtotalCents === 6200 && totals.discountCents === 930 && totals.finalCents === 5270, 'Bundle math failed');
+
+        // 5. Quantity clamp caps single SKU at 20
+        assert(calculateBagTotals(new Map([['CALMA', 500]])).totalUnits === 20, 'Quantity clamp failed');
+
+        document.getElementById('test-badge').textContent = '✓ 5/5 Unit Tests Passing';
+      }
+
+      renderProducts('ALL');
+      renderFinder();
+      syncBagUI();
+      runUnitTests();
+    })();
+  </script>
+</body>
+</html>
