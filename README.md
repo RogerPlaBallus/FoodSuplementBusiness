@@ -1,7 +1,8 @@
-# VERA CATALONIA — Clean Daily Supplements SPA
+# VERA CATALONIA — Food Supplements 
 
-## Authorship
-- Made by **Roger Pla Ballús** with **Gemini 2.5 Pro**
+- Made by **Roger Pla Ballús** with **Gemini 4 Argon-high**
+
+https://rogerplaballus.github.io/FoodSuplementBusiness/
 
 ## Stack
 - **Markup:** Semantic HTML5 (`<dialog>`, native form validation)
